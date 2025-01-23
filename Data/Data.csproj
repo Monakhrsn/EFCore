@@ -16,6 +16,7 @@
 
     <ItemGroup>
       <Folder Include="Databases\" />
+      <Folder Include="Migrations\" />
     </ItemGroup>
 
     <ItemGroup>

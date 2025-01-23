@@ -12,7 +12,7 @@ public class DataContextFactory : IDesignTimeDbContextFactory<DataContext>
     {
         var optionsBuilder = new DbContextOptionsBuilder<DataContext>();
         optionsBuilder.UseSqlServer(
-            @"Server=localhost;Database=EFCoreDB;User Id=sa;Password=VerySecret1234;TrustServerCertificate=True;");
+            @"Server=localhost;Database=EFCoreDB;User Id=sa;Password=VerySecret1234;TrustServerCertificate=True;Encrypt=False");
         return new DataContext(optionsBuilder.Options);
     }
 }

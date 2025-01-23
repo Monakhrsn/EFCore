@@ -9,6 +9,6 @@ var serviceCollection = new ServiceCollection();
 
 serviceCollection.AddDbContext<DataContext>(options =>
     options.UseSqlServer(
-        @"Server=localhost;Database=EFCoreDB;User Id=sa;Password=VerySecret1234;TrustServerCertificate=True;"));
+        @"Server=localhost;Database=EFCoreDB;User Id=sa;Password=VerySecret1234;TrustServerCertificate=True;Encrypt=False"));
 
 var serviceProvider = serviceCollection.BuildServiceProvider();
