@@ -3,7 +3,7 @@ using Data.Entities;
 
 namespace Business.Services;
 
-public class UserService(DataContext context)
+public class UserService(DataContext context) : IUserService
 {
     private readonly DataContext _context = context;
 
@@ -41,7 +41,7 @@ public class UserService(DataContext context)
         return userEntity;
     }
 
-    public bool DeletUserById(int id)
+    public bool DeleteUserById(int id)
     {
         var userEntity = _context.Users.FirstOrDefault(x => x.Id == id);
         if (userEntity != null)
